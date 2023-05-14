@@ -21,10 +21,10 @@ function generatePassword(passwordLength) {
   }
   //alert will create a pop up alerting user about something, confirm is a true/false boolean, prompt returns a prompt for user 
   
-  var choseLowercase = confirm('Would you like to use lowercase letters in your password?');
-  var choseUppercase = confirm('Would you like to use uppercase letters in your password?');
-  var choseNumbers = confirm('Would you like to use numbers in your password?');
-  var choseSpecialCharacters = confirm('Would you like to use special characters in your password?');
+  var wantsLowercase = confirm('Would you like to use lowercase letters in your password?');
+  var wantsUppercase = confirm('Would you like to use uppercase letters in your password?');
+  var wantsNumbers = confirm('Would you like to use numbers in your password?');
+  var wantsSpecial = confirm('Would you like to use special characters in your password?');
 
   var allCharacters = [];
   
@@ -40,7 +40,7 @@ function generatePassword(passwordLength) {
     allCharacters = allCharacters.concat(numbers);
   }
 
-  if (wantsLowercase) {
+  if (wantsSpecial) {
     allCharacters = allCharacters.concat(specialCharacters);
   }
 
@@ -57,7 +57,6 @@ function writePassword(pw) {
   var passwordText = document.querySelector('#password');
   passwordText.value = pw;
 }
-
 
 // Add event listener to generate button
 //This line tells the program to run the writePassword function when the button is clicked
