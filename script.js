@@ -20,7 +20,7 @@ function generatePassword(passwordLength) {
   if (parseInt(passwordLength) < 8 || parseInt(passwordLength) > 128) {
   //Creates a pop-up alerting user that they must choose character length from 8 to 128
     alert("You must type a number from 8 to 128.");
-    //This line returns "null" to exit the function if value is user types invalid length
+    //This line returns "null" to exit the function if value user types is invalid length
     return null;
   }
   
@@ -34,8 +34,7 @@ function generatePassword(passwordLength) {
   var allCharacters = [];
 
   //The 4 "if" statements below will check if user chose each type of specified character
-
-  //Any time one of the conditions is true, second line of each "if" statement concatenates each array (uppercaseLetters, etc.) with the allCharacters array using the concat method. The resulting array will contain all the characters chosen so far
+  /* Any time one of the conditions is true, second line of each "if" statement concatenates each array (uppercaseLetters, etc.) with the allCharacters array using the concat method. The resulting array will contain all the characters chosen so far */
 
   if (choseUppercase) {
     allCharacters = allCharacters.concat(uppercaseLetters);
@@ -57,20 +56,31 @@ function generatePassword(passwordLength) {
   //Initializes the empty string variable (called "password") that will store the generated password
   var password ="";
   
+  //for sets up loop that repeats the code a specified number of times (passwordLength number of times)
+  //var i = 0 initializes a variable i, and sets its value to 0
+  //i < passwordLength means that as long as the value of i is less than the passwordLength, the loop will keep running
+  //i++ increases value of i by 1 after each iteration of the loop
   for (var i = 0; i < passwordLength; i++) {
+      //Creates a random index by multiplying a random decimal value between 0 and 1 (from Math.random) with the length of the allCharacters array
+      //Math.floor rounds down the result to the nearest integer
       var randomIndex = Math.floor(Math.random() * allCharacters.length);
+      //Appends the character at the randomly generated index from the allCharacters array to the password string
       password += allCharacters[randomIndex];
   }
+  //Calls writePassword function, passes in generated "password" as an argument, then returns result of of this function 
   return writePassword(password);
 }
 
-
+//Declares writePassword function which has pw as a parameter. pw represents generated password
 function writePassword(pw) {
+  //Selects element with ID "password" and assigns it to passwordText variable
   var passwordText = document.querySelector("#password");
+  //Sets the value property of the passwordText element to the generated password (pw)
   passwordText.value = pw;
 }
 
-// This adds an event listener to the generateBtn button that listens for a click event. When button is clicked, generatePassword function is called
+//Adds an event listener to the generateBtn button that listens for a click event
+//When button is clicked, generatePassword function is called
 generateBtn.addEventListener("click", generatePassword);
 
 
