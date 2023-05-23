@@ -12,25 +12,31 @@ var numbers = "1234567890".split("");
 var specialCharacters = "~`!@#$%^&*()_+={}[]|\\".split("");
 
 
-//Declaring generatePassword function with passwordLength parameter
+//Declares generatePassword function with passwordLength parameter
 function generatePassword(passwordLength) {
-  //prompts user to enter password length and assigns that value to the passwordLength variable
+  //Prompts user to enter password length and assigns that value to the passwordLength variable
   var passwordLength = prompt ("Choose a password length from 8 to 128 characters");
-  //checks to see if parsed integer value of passwordLength is less than 8 and greater than 128
+  //Checks to see if parsed integer value of passwordLength is less than 8 and greater than 128
   if (parseInt(passwordLength) < 8 || parseInt(passwordLength) > 128) {
-  //alert creates a pop-up alerting user that they must choose character length from 8 to 128
+  //Creates a pop-up alerting user that they must choose character length from 8 to 128
     alert("You must type a number from 8 to 128.");
-    //this line returns "null" to exit the function if value is user types invalid length
+    //This line returns "null" to exit the function if value is user types invalid length
     return null;
   }
   
+  //Next 4 lines display each prompt to user asking for true/false input. User choice is stored in each variable 
   var choseUppercase = confirm("Would you like your password to include uppercase letters?");
   var choseLowercase = confirm("Would you like your password to include lowercase letters?");
   var choseNumbers = confirm("Would you like your password to include numbers?");
   var choseSpecial = confirm("Would you like your password to include special characters?");
 
+  //Initializes an empty array called allCharacters that will store all the characters, based on the user's choices above
   var allCharacters = [];
-  
+
+  //The 4 "if" statements below will check if user chose each type of specified character
+
+  //Any time one of the conditions is true, second line of each "if" statement concatenates each array (uppercaseLetters, etc.) with the allCharacters array using the concat method. The resulting array will contain all the characters chosen so far
+
   if (choseUppercase) {
     allCharacters = allCharacters.concat(uppercaseLetters);
   }
@@ -48,7 +54,9 @@ function generatePassword(passwordLength) {
     allCharacters = allCharacters.concat(specialCharacters);
   }
 
+  //Initializes the empty string variable (called "password") that will store the generated password
   var password ="";
+  
   for (var i = 0; i < passwordLength; i++) {
       var randomIndex = Math.floor(Math.random() * allCharacters.length);
       password += allCharacters[randomIndex];
@@ -62,7 +70,7 @@ function writePassword(pw) {
   passwordText.value = pw;
 }
 
-// This adds an event listener to the generateBtn button. When button is clicked, generatePassword function is called
+// This adds an event listener to the generateBtn button that listens for a click event. When button is clicked, generatePassword function is called
 generateBtn.addEventListener("click", generatePassword);
 
 
