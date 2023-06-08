@@ -37,10 +37,23 @@ To run this project locally, follow these steps:
 
 ## Screenshots
 
-![Password Generator](screenshots/password-generator.png)
+![Password Generator](password-generator.png)
 
 ## Credits
 
-This project was created by [Your Name] as a coding exercise. It utilizes concepts and techniques learned during web development training.
+This project was developed by Donahi Casas-Silva. It was created as part of the UC Berkeley Extension Coding Bootcamp curriculum and utilizes concepts and techniques learned during this web development training course.
 
 The CSS styling of the project was inspired by modern design trends and best practices.
+
+#### Instructors/Tutors/Collaborators:
+
+The project was completed with the help of my UC Berkeley Extension Bootcamp course instructor, Teaching Assistants and Zoom video tutors. The project was also completed in collaboration with Monique Merzoug and Jacob Simmons who helped me work through the coding challenges during our study sessions. 
+
+
+#### Web Resources:
+
+- w3schools.com
+- developer.mozilla.org (MDN web docs)
+- chat.openai.com
+- bard.google.com
+- Google.com
