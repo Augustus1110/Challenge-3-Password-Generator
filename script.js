@@ -73,10 +73,10 @@ function generatePassword(passwordLength) {
 
 //Declares writePassword function which has pw as a parameter. pw represents generated password
 function writePassword(pw) {
-  //Selects element with ID "password" and assigns it to passwordText variable
-  var passwordText = document.querySelector("#password");
-  //Sets the value property of the passwordText element to the generated password (pw)
-  passwordText.value = pw;
+  //Selects element with ID "password" and assigns it to brandNew variable
+  var brandNew = document.querySelector("#password");
+  //Sets the value property of the brandNew element to the generated password (pw)
+  brandNew.value = pw;
 }
 
 //Adds an event listener to the generateBtn button that listens for a click event
