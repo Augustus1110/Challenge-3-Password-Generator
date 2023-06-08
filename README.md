@@ -43,11 +43,11 @@ To run this project locally, follow these steps:
 
 This project was developed by Donahi Casas-Silva. It was created as part of the UC Berkeley Extension Coding Bootcamp curriculum and utilizes concepts and techniques learned during this web development training course.
 
-The CSS styling of the project was inspired by modern design trends and best practices.
+The HTML and CSS styling for this project was inspired was provided as part of the instructional materials for the course.
 
 #### Instructors/Tutors/Collaborators:
 
-The project was completed with the help of my UC Berkeley Extension Bootcamp course instructor, Teaching Assistants and Zoom video tutors. The project was also completed in collaboration with Monique Merzoug and Jacob Simmons who helped me work through the coding challenges during our study sessions. 
+The project was completed with the guidance and educational advice of the UC Berkeley Extension Bootcamp course instructor, Teaching Assistants and Zoom video tutors. The project was also completed in collaboration with fellow Bootcamp students Monique Merzoug and Jacob Simmons who helped me work through the coding challenges during our study sessions. 
 
 
 #### Web Resources:
